@@ -1,0 +1,24 @@
+{
+	"name": "kecik/skeleton",
+	"description": "A Kecik Framework skeleton application for rapid development",
+	"keywords": ["framework", "kecik"],
+	"license": "MIT",
+	"type": "project",
+	"require": {
+		"kecik/kecik": "1.0.*@dev",
+		"kecik/session": "1.0.*@dev",
+		"kecik/cookie": "1.0.*@dev",
+		"kecik/database": "1.0.*@dev",
+		"kecik/language": "1.0.*@dev",
+		"kecik/dic": "1.0.*@dev",
+		"kecik/mvc": "1.0.*@dev",
+		"kecik/auth": "1.0.*@dev",
+		"symfony/debug": "3.0.*@dev"
+	},
+	"extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
