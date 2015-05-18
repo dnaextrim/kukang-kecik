@@ -47,10 +47,13 @@ if( !('setting' in window['kecik']) ) {
     'bootstrap_convert' : true,
     'table_convert'     : true,
 
-    'submit_func'     : true,
-    'insert_func'     : null,
-    'update_func'     : null,
-    'clear_func'      : null
+    'before_submit_func'    : true,
+    'after_submit_func'     : true,
+    'insert_func'           : null,
+    'update_func'           : null,
+    'get_func'              : null,
+    'delete_func'           : null,
+    'clear_func'            : null
   }
 }
 
@@ -308,8 +311,8 @@ kecik.init = function(config) {
         $(kecik.setting.loading).modal('show');
         event.preventDefault();
 
-        if ($.isFunction(kecik.setting.submit_func)) {
-            if ( kecik.setting.submit_func() === false) return false;
+        if ($.isFunction(kecik.setting.before_submit_func)) {
+            if ( kecik.setting.before_submit_func() === false) return false;
         }
 
         var form_serial = form.serialize();
@@ -399,6 +402,10 @@ kecik.init = function(config) {
 
                 kecik.clearform();
                 $(kecik.setting.form_box).hide();
+
+                if ($.isFunction(kecik.setting.after_submit_func)) {
+                    if ( kecik.setting.after_submit_func() === false) return false;
+                }
             }).fail(function(res){
                 upload_in_progress = false;
                 alert("There was an error");                        
@@ -415,6 +422,10 @@ kecik.init = function(config) {
                 kecik.clearform();
                 $(kecik.setting.form_box).hide();
                 
+                if ($.isFunction(kecik.setting.after_submit_func)) {
+                    if ( kecik.setting.after_submit_func() === false) return false;
+                }
+
                 var oTable = $(kecik.setting.table).dataTable();
                 $.post(kecik.setting.find_url, null, function (json) {
                     oTable.fnClearTable();
@@ -523,6 +534,7 @@ kecik.clearform = function(callback) {
     if ($(kecik.setting.form)[0] !== 'undefined')
         $(kecik.setting.form)[0].reset();
     $(kecik.setting.loading).modal('hide');
+
     if ($.isFunction(callback))
         kecik.setting.clear_func = callback;
     else if ($.isFunction(kecik.setting.clear_func))
@@ -546,7 +558,7 @@ kecik.Update = function(callback) {
         kecik.setting.update_func();
 };
 
-kecik.Get = function(id) {
+kecik.Get = function(id, callback) {
     var $data;
     $(kecik.setting.loading).modal('show');
     $.post(kecik.setting.get_url, // request ke file load_data.php
@@ -595,6 +607,12 @@ kecik.Get = function(id) {
                 $('form').attr('action', kecik.setting.update_url);
                 
                 $('.'+kecik.setting.field_class+':first').focus();
+
+                if ($.isFunction(callback))
+                    kecik.setting.get_func = callback;
+                else if ($.isFunction(kecik.setting.get_func))
+                    kecik.setting.get_func();
+
             }else{
                 alert(data.error); // jika ada respon error tampilkan alert
             }
@@ -602,7 +620,7 @@ kecik.Get = function(id) {
     }, 'json');
 };
 
-kecik.Delete = function(id) {
+kecik.Delete = function(id, callback) {
     bootbox.dialog({
         message: kecik.setting.message_delete,
         title: "Confirmation",
@@ -616,6 +634,11 @@ kecik.Delete = function(id) {
                     id,
                     function(data){
                         
+                        if ($.isFunction(callback))
+                            kecik.setting.delete_func = callback;
+                        else if ($.isFunction(kecik.setting.delete_func))
+                            kecik.setting.delete_func();
+
                         var oTable = $(kecik.setting.table).dataTable();
                         $.post(kecik.setting.find_url, null, function (json) {
                             
@@ -684,7 +707,14 @@ kecik.View = function(id) {
 
 kecik.beforeSubmit = function(callback) {
     if (typeof callback !== 'undefined')
-        kecik.setting.submit_func = callback;
+        kecik.setting.before_submit_func = callback;
     else
-        kecik.setting.submit_func = true;
+        kecik.setting.before_submit_func = true;
+};
+
+kecik.afterSubmit = function(callback) {
+    if (typeof callback !== 'undefined')
+        kecik.setting.after_submit_func = callback;
+    else
+        kecik.setting.after_submit_func = true;
 };
