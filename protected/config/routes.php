@@ -14,7 +14,7 @@ $app->config->set('auth.logout_route', 'logout');
 /**
  * SB Admin2 Template
  **/
-/*
+
 $template = 'sb-admin/sb-admin';
 $app->config->set('path.assets', 'assets/sb-admin');
 $app->config->set('auth.login_template', 'sb-admin/login');
@@ -44,12 +44,12 @@ $app->assets->js->add('dataTables.responsive');
 $app->assets->js->add('select2.min');
 $app->assets->js->add('sb-admin-2');
 // -- END SB Admin2 Template
-*/
+
 
 /**
  * Admin LTE Template
  **/
-
+/*
 $template = 'adminlte/adminlte';
 $app->config->set('path.assets', 'assets/adminlte');
 $app->config->set('auth.login_template', 'adminlte/login');
@@ -85,7 +85,7 @@ $app->assets->js->add('dataTables.bootstrap.min');
 $app->assets->js->add('dataTables.responsive');
 $app->assets->js->add('select2.min');
 //-- END Admin LTE Template
-
+*/
 
 Kecik\Auth::init($app);
 

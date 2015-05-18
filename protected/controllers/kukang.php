@@ -348,60 +348,21 @@ class Kukang extends AuthController {
 
 
 	public function profile() {
-		//$this->assets->js->add('kecik');
-
-		/*$actions = array(
-			'view' => (object) array(
-				'action' 	=> 'kecik.View',
-				'desc'		=> 'View',
-				'icon'		=> 'fa fa-search-plus',
-				'class'  	=> 'text-primary'
-			),
-			'edit' => (object) array(
-				'action' 	=> 'kecik.Get',
-				'desc'		=> 'Edit',
-				'icon'		=> 'fa fa-pencil',
-				'class'  	=> 'text-success'
-			),
-			'delete' => (object) array(
-				'action' 	=> 'kecik.Delete',
-				'desc' 		=> 'Delete',
-				'icon' 		=> 'fa fa-trash',
-				'class'  	=> 'text-danger'
-			)
-		);*/
-
-		/*$column = array(
-			(object) array(
-				'data' 		=> 'username',
-				'title'		=> 'Username',
-			),
-			(object) array(
-				'data' 		=> 'fullname',
-				'title'		=> 'Fullname',
-			),
-			(object) array(
-				'data' 		=> 'level',
-				'title'		=> 'Level',
-			)
-		);*/
+		$this->assets->js->add('kecik');
 
 		$this->config->set('crud_config', json_encode(array(
 			'base_url' 		=> $this->url->baseUrl(),
-	        'insert_url' 	=> $this->url->linkto('user/insert'),
+	        'insert_url' 	=> $this->url->linkto('user/update'),
 	        'update_url'    => $this->url->linkto('user/update'),
 	        'delete_url'    => $this->url->linkto('user/delete'),
 	        'find_url'      => $this->url->linkto('user/find'),
 	        'get_url'       => $this->url->linkto('user/get'),
 	        
 	        'bootstrap_convert' => FALSE,
-	        'table_column' 	=> $column,
-	        'table_actions'	=> $actions,
-	        'table_order'	=> array(array( 1, "desc" )),
 	        'table_convert' => FALSE
 		), JSON_PRETTY_PRINT));
 
-		return $this->view('kukang/user');
+		return $this->view('kukang/profile');
 	}
 
 }
