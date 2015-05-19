@@ -115,7 +115,7 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        @controller
+        @response
 
     </div>
     <!-- /#wrapper -->

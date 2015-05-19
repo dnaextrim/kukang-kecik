@@ -202,12 +202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/kecik.git",
-                "reference": "c0f618c0844ceac47e98c06c21e606a10f4da970"
+                "reference": "fed5a52d509a300be75ef8b29d6b3e79d0b3a487"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/kecik/zipball/c0f618c0844ceac47e98c06c21e606a10f4da970",
-                "reference": "c0f618c0844ceac47e98c06c21e606a10f4da970",
+                "url": "https://api.github.com/repos/kecik-framework/kecik/zipball/fed5a52d509a300be75ef8b29d6b3e79d0b3a487",
+                "reference": "fed5a52d509a300be75ef8b29d6b3e79d0b3a487",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
                 "micro",
                 "single"
             ],
-            "time": "2015-05-14 11:46:11"
+            "time": "2015-05-18 15:44:45"
         },
         {
             "name": "kecik/language",
@@ -433,12 +433,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "ba29f402facd88609123affe3d6a3c22c9e739b2"
+                "reference": "142cddfce4beee0d4382b21cfebe1074ba639cbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/ba29f402facd88609123affe3d6a3c22c9e739b2",
-                "reference": "ba29f402facd88609123affe3d6a3c22c9e739b2",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/142cddfce4beee0d4382b21cfebe1074ba639cbf",
+                "reference": "142cddfce4beee0d4382b21cfebe1074ba639cbf",
                 "shasum": ""
             },
             "require": {
@@ -485,7 +485,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-12 15:48:43"
+            "time": "2015-05-15 14:16:35"
         }
     ],
     "packages-dev": [],

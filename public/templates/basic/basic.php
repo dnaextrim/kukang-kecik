@@ -42,7 +42,7 @@
 
     <div class="container">
 
-        @controller
+        @response
 
     </div><!-- /.container -->
 		
