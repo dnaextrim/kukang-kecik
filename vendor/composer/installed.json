@@ -1,73 +1,24 @@
 [
     {
-        "name": "kecik/kecik",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kecik-framework/kecik.git",
-            "reference": "fed5a52d509a300be75ef8b29d6b3e79d0b3a487"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kecik-framework/kecik/zipball/fed5a52d509a300be75ef8b29d6b3e79d0b3a487",
-            "reference": "fed5a52d509a300be75ef8b29d6b3e79d0b3a487",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "time": "2015-05-18 15:44:45",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Kecik": "."
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Dony Wahyu Isp",
-                "email": "dna.extrim@gmail.com"
-            }
-        ],
-        "description": "Single File Micro Framework",
-        "keywords": [
-            "framework",
-            "kecik",
-            "micro",
-            "single"
-        ]
-    },
-    {
         "name": "kecik/session",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/kecik-framework/session.git",
-            "reference": "20e3a25fa650ac7fcce3419ad020e5cd4a047e67"
+            "reference": "9ca79a26b91d002da26901bd17e03520a31f987f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kecik-framework/session/zipball/20e3a25fa650ac7fcce3419ad020e5cd4a047e67",
-            "reference": "20e3a25fa650ac7fcce3419ad020e5cd4a047e67",
+            "url": "https://api.github.com/repos/kecik-framework/session/zipball/9ca79a26b91d002da26901bd17e03520a31f987f",
+            "reference": "9ca79a26b91d002da26901bd17e03520a31f987f",
             "shasum": ""
         },
         "require": {
-            "kecik/kecik": "~1.0",
+            "kecik/kecik": "1.1.*@dev",
             "php": ">=5.3.0"
         },
-        "time": "2015-04-29 04:30:57",
+        "time": "2015-05-20 12:44:49",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -104,19 +55,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/kecik-framework/database.git",
-            "reference": "1af74fc4772f250261d22f80dd51ea75cd67fb72"
+            "reference": "c75602a6a949cb5481e46542c0399c806fc7e2dd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kecik-framework/database/zipball/1af74fc4772f250261d22f80dd51ea75cd67fb72",
-            "reference": "1af74fc4772f250261d22f80dd51ea75cd67fb72",
+            "url": "https://api.github.com/repos/kecik-framework/database/zipball/c75602a6a949cb5481e46542c0399c806fc7e2dd",
+            "reference": "c75602a6a949cb5481e46542c0399c806fc7e2dd",
             "shasum": ""
         },
         "require": {
-            "kecik/kecik": "~1.0",
+            "kecik/kecik": "1.1.*@dev",
             "php": ">=5.4.0"
         },
-        "time": "2015-05-11 07:17:19",
+        "time": "2015-05-20 12:43:27",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -142,107 +93,6 @@
         "description": "Database Libraries for Kecik Framework",
         "keywords": [
             "database",
-            "framework",
-            "kecik"
-        ]
-    },
-    {
-        "name": "kecik/mvc",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kecik-framework/mvc.git",
-            "reference": "56a8c7ab4fed8b568a6e35c83dd71e2e03d49e10"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kecik-framework/mvc/zipball/56a8c7ab4fed8b568a6e35c83dd71e2e03d49e10",
-            "reference": "56a8c7ab4fed8b568a6e35c83dd71e2e03d49e10",
-            "shasum": ""
-        },
-        "require": {
-            "kecik/database": "1.0.*@dev",
-            "kecik/kecik": "1.0.*@dev",
-            "php": ">=5.4.0"
-        },
-        "time": "2015-05-11 08:17:59",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kecik\\": "MVC/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Dony Wahyu Isp",
-                "email": "dna.extrim@gmail.com"
-            }
-        ],
-        "description": "External MVC Libraries for Kecik Framework",
-        "keywords": [
-            "framework",
-            "kecik",
-            "mvc"
-        ]
-    },
-    {
-        "name": "kecik/auth",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kecik-framework/auth.git",
-            "reference": "9e5ae988a90d7cfbe9d1a405ff6fec794880d564"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kecik-framework/auth/zipball/9e5ae988a90d7cfbe9d1a405ff6fec794880d564",
-            "reference": "9e5ae988a90d7cfbe9d1a405ff6fec794880d564",
-            "shasum": ""
-        },
-        "require": {
-            "kecik/kecik": "1.0.*@dev",
-            "kecik/mvc": "1.0.*@dev",
-            "kecik/session": "1.0.*@dev",
-            "php": ">=5.4.0"
-        },
-        "time": "2015-05-14 18:57:25",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Kecik\\": "Auth/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Dony Wahyu Isp",
-                "email": "dna.extrim@gmail.com"
-            }
-        ],
-        "description": "Libraries for Authentication for Kecik Framework",
-        "keywords": [
-            "authentic",
             "framework",
             "kecik"
         ]
@@ -361,19 +211,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/kecik-framework/cookie.git",
-            "reference": "e8b20f814f6b17846d5015d5b955e0912ecfe1d5"
+            "reference": "35d604974cac8b0ff825d037bd13813d31a452fd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kecik-framework/cookie/zipball/e8b20f814f6b17846d5015d5b955e0912ecfe1d5",
-            "reference": "e8b20f814f6b17846d5015d5b955e0912ecfe1d5",
+            "url": "https://api.github.com/repos/kecik-framework/cookie/zipball/35d604974cac8b0ff825d037bd13813d31a452fd",
+            "reference": "35d604974cac8b0ff825d037bd13813d31a452fd",
             "shasum": ""
         },
         "require": {
-            "kecik/kecik": "~1.0",
+            "kecik/kecik": "1.1.*@dev",
             "php": ">=5.3.0"
         },
-        "time": "2015-04-29 04:30:08",
+        "time": "2015-05-20 12:42:22",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -496,6 +346,156 @@
         "keywords": [
             "di",
             "dic",
+            "framework",
+            "kecik"
+        ]
+    },
+    {
+        "name": "kecik/kecik",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kecik-framework/kecik.git",
+            "reference": "3aee0b73241c47b313e9673a0e9c6a1b9170be51"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kecik-framework/kecik/zipball/3aee0b73241c47b313e9673a0e9c6a1b9170be51",
+            "reference": "3aee0b73241c47b313e9673a0e9c6a1b9170be51",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "time": "2015-05-20 06:38:33",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.1-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Kecik": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dony Wahyu Isp",
+                "email": "dna.extrim@gmail.com"
+            }
+        ],
+        "description": "Single File Micro Framework",
+        "keywords": [
+            "framework",
+            "kecik",
+            "micro",
+            "single"
+        ]
+    },
+    {
+        "name": "kecik/mvc",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kecik-framework/mvc.git",
+            "reference": "be14f0a04efe9f052e1a7cb38be7eead100f510f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kecik-framework/mvc/zipball/be14f0a04efe9f052e1a7cb38be7eead100f510f",
+            "reference": "be14f0a04efe9f052e1a7cb38be7eead100f510f",
+            "shasum": ""
+        },
+        "require": {
+            "kecik/database": "1.0.*@dev",
+            "kecik/kecik": "1.1.*@dev",
+            "php": ">=5.4.0"
+        },
+        "time": "2015-05-20 12:44:26",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kecik\\": "MVC/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dony Wahyu Isp",
+                "email": "dna.extrim@gmail.com"
+            }
+        ],
+        "description": "External MVC Libraries for Kecik Framework",
+        "keywords": [
+            "framework",
+            "kecik",
+            "mvc"
+        ]
+    },
+    {
+        "name": "kecik/auth",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kecik-framework/auth.git",
+            "reference": "762410afc38b885af4c29de0ce00a8bddfeaf207"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kecik-framework/auth/zipball/762410afc38b885af4c29de0ce00a8bddfeaf207",
+            "reference": "762410afc38b885af4c29de0ce00a8bddfeaf207",
+            "shasum": ""
+        },
+        "require": {
+            "kecik/kecik": "1.1.*@dev",
+            "kecik/mvc": "1.0.*@dev",
+            "kecik/session": "1.0.*@dev",
+            "php": ">=5.4.0"
+        },
+        "time": "2015-05-20 12:45:16",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Kecik\\": "Auth/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Dony Wahyu Isp",
+                "email": "dna.extrim@gmail.com"
+            }
+        ],
+        "description": "Libraries for Authentication for Kecik Framework",
+        "keywords": [
+            "authentic",
             "framework",
             "kecik"
         ]
