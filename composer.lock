@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c4b5f814ffff69c69d0fc7a1824872c4",
+    "hash": "7c1beb4ac522657fcdbbfedf4a444dab",
     "packages": [
         {
             "name": "kecik/auth",
@@ -12,16 +12,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/auth.git",
-                "reference": "9e5ae988a90d7cfbe9d1a405ff6fec794880d564"
+                "reference": "762410afc38b885af4c29de0ce00a8bddfeaf207"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/auth/zipball/9e5ae988a90d7cfbe9d1a405ff6fec794880d564",
-                "reference": "9e5ae988a90d7cfbe9d1a405ff6fec794880d564",
+                "url": "https://api.github.com/repos/kecik-framework/auth/zipball/762410afc38b885af4c29de0ce00a8bddfeaf207",
+                "reference": "762410afc38b885af4c29de0ce00a8bddfeaf207",
                 "shasum": ""
             },
             "require": {
-                "kecik/kecik": "1.0.*@dev",
+                "kecik/kecik": "1.1.*@dev",
                 "kecik/mvc": "1.0.*@dev",
                 "kecik/session": "1.0.*@dev",
                 "php": ">=5.4.0"
@@ -53,7 +53,7 @@
                 "framework",
                 "kecik"
             ],
-            "time": "2015-05-14 18:57:25"
+            "time": "2015-05-20 12:45:16"
         },
         {
             "name": "kecik/cookie",
@@ -61,16 +61,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/cookie.git",
-                "reference": "e8b20f814f6b17846d5015d5b955e0912ecfe1d5"
+                "reference": "35d604974cac8b0ff825d037bd13813d31a452fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/cookie/zipball/e8b20f814f6b17846d5015d5b955e0912ecfe1d5",
-                "reference": "e8b20f814f6b17846d5015d5b955e0912ecfe1d5",
+                "url": "https://api.github.com/repos/kecik-framework/cookie/zipball/35d604974cac8b0ff825d037bd13813d31a452fd",
+                "reference": "35d604974cac8b0ff825d037bd13813d31a452fd",
                 "shasum": ""
             },
             "require": {
-                "kecik/kecik": "~1.0",
+                "kecik/kecik": "1.1.*@dev",
                 "php": ">=5.3.0"
             },
             "type": "library",
@@ -100,7 +100,7 @@
                 "framework",
                 "kecik"
             ],
-            "time": "2015-04-29 04:30:08"
+            "time": "2015-05-20 12:42:22"
         },
         {
             "name": "kecik/database",
@@ -108,16 +108,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/database.git",
-                "reference": "1af74fc4772f250261d22f80dd51ea75cd67fb72"
+                "reference": "c75602a6a949cb5481e46542c0399c806fc7e2dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/database/zipball/1af74fc4772f250261d22f80dd51ea75cd67fb72",
-                "reference": "1af74fc4772f250261d22f80dd51ea75cd67fb72",
+                "url": "https://api.github.com/repos/kecik-framework/database/zipball/c75602a6a949cb5481e46542c0399c806fc7e2dd",
+                "reference": "c75602a6a949cb5481e46542c0399c806fc7e2dd",
                 "shasum": ""
             },
             "require": {
-                "kecik/kecik": "~1.0",
+                "kecik/kecik": "1.1.*@dev",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -147,7 +147,7 @@
                 "framework",
                 "kecik"
             ],
-            "time": "2015-05-11 07:17:19"
+            "time": "2015-05-20 12:43:27"
         },
         {
             "name": "kecik/dic",
@@ -202,12 +202,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/kecik.git",
-                "reference": "fed5a52d509a300be75ef8b29d6b3e79d0b3a487"
+                "reference": "3aee0b73241c47b313e9673a0e9c6a1b9170be51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/kecik/zipball/fed5a52d509a300be75ef8b29d6b3e79d0b3a487",
-                "reference": "fed5a52d509a300be75ef8b29d6b3e79d0b3a487",
+                "url": "https://api.github.com/repos/kecik-framework/kecik/zipball/3aee0b73241c47b313e9673a0e9c6a1b9170be51",
+                "reference": "3aee0b73241c47b313e9673a0e9c6a1b9170be51",
                 "shasum": ""
             },
             "require": {
@@ -216,7 +216,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -241,7 +241,7 @@
                 "micro",
                 "single"
             ],
-            "time": "2015-05-18 15:44:45"
+            "time": "2015-05-20 06:38:33"
         },
         {
             "name": "kecik/language",
@@ -295,17 +295,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/mvc.git",
-                "reference": "56a8c7ab4fed8b568a6e35c83dd71e2e03d49e10"
+                "reference": "be14f0a04efe9f052e1a7cb38be7eead100f510f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/mvc/zipball/56a8c7ab4fed8b568a6e35c83dd71e2e03d49e10",
-                "reference": "56a8c7ab4fed8b568a6e35c83dd71e2e03d49e10",
+                "url": "https://api.github.com/repos/kecik-framework/mvc/zipball/be14f0a04efe9f052e1a7cb38be7eead100f510f",
+                "reference": "be14f0a04efe9f052e1a7cb38be7eead100f510f",
                 "shasum": ""
             },
             "require": {
                 "kecik/database": "1.0.*@dev",
-                "kecik/kecik": "1.0.*@dev",
+                "kecik/kecik": "1.1.*@dev",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -335,7 +335,7 @@
                 "kecik",
                 "mvc"
             ],
-            "time": "2015-05-11 08:17:59"
+            "time": "2015-05-20 12:44:26"
         },
         {
             "name": "kecik/session",
@@ -343,16 +343,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kecik-framework/session.git",
-                "reference": "20e3a25fa650ac7fcce3419ad020e5cd4a047e67"
+                "reference": "9ca79a26b91d002da26901bd17e03520a31f987f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kecik-framework/session/zipball/20e3a25fa650ac7fcce3419ad020e5cd4a047e67",
-                "reference": "20e3a25fa650ac7fcce3419ad020e5cd4a047e67",
+                "url": "https://api.github.com/repos/kecik-framework/session/zipball/9ca79a26b91d002da26901bd17e03520a31f987f",
+                "reference": "9ca79a26b91d002da26901bd17e03520a31f987f",
                 "shasum": ""
             },
             "require": {
-                "kecik/kecik": "~1.0",
+                "kecik/kecik": "1.1.*@dev",
                 "php": ">=5.3.0"
             },
             "type": "library",
@@ -382,7 +382,7 @@
                 "kecik",
                 "session"
             ],
-            "time": "2015-04-29 04:30:57"
+            "time": "2015-05-20 12:44:49"
         },
         {
             "name": "psr/log",
