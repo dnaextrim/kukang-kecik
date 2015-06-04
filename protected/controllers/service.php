@@ -13,9 +13,27 @@ class Service extends Controller {
 		$this->app = $app;
 	}
 
+    public function SMSMessage($key, $keys) {
+        $msgReply = '';
+
+        switch (strtolower($key)) {
+            case 'key': //** Auto Replay key word
+                $msgReply = ''; //** Auto Replay Message
+            break;
+            
+            
+
+            default:
+                $msgReply = 'Wrong Format...';
+            break;
+        }
+
+        return $msgReply;
+    }
+
 	public function autoReplay() {
 
-		$inbox = \Model\Inbox::findProcessed("'false'");
+		$inbox = \Model\Inbox::findProcessed("false");
         $msgReply = '';
 
         $pdu = new PDU2();
@@ -29,17 +47,7 @@ class Service extends Controller {
             $pesan = $data->TextDecoded;
 
             if (isset($key[0])) {
-                switch (strtolower($key[0])) {
-                    case 'key': //** Auto Replay key word
-                        $msgReply = ''; //** Auto Replay Message
-                    break;
-                    
-                    
-
-                    default:
-                        
-                    break;
-                }
+                $msgReply = $this->SMSMessage($key[0], $key);  
             }
 
             if ($msgReply != '') {
@@ -114,25 +122,25 @@ class Service extends Controller {
         }
 
         $user = \Model\User::find();
-        $sent = \Model\Sent::findProcessed("'false'");
+        $sent = \Model\Sent::findProcessed("false");
 
         foreach ($sent as $data) {  
             if ($data->Status == 'SendingOK')
-                $status = 'SMS Terkirim';
+                $status = 'SMS Sent';
             elseif ($data->Status == 'SendingOKNoReport')
-                $status = 'SMS Terkirim';
+                $status = 'SMS Sent';
             elseif ($data->Status == 'SendingError')
-                $status = 'SMS Gagal';
+                $status = 'SMS Fail';
             elseif ($data->Status == 'DeliveryOK')
-                $status = 'SMS Terkirim';
+                $status = 'SMS Sent';
             elseif ($data->Status == 'DeliveryFailed')
-                $status = 'SMS Gagal';
+                $status = 'SMS Fail';
             elseif ($data->Status == 'DeliveryPending')
-                $status = 'SMS Gagal';
+                $status = 'SMS Fail';
             elseif ($data->Status == 'DeliveryUnknown')
-                $status = 'SMS Gagal';
+                $status = 'SMS Fail';
             elseif ($data->Status == 'Error')
-                $status = 'SMS Gagal';
+                $status = 'SMS Fail';
 
             reset($user);
             foreach ($user as $data2) {
@@ -158,7 +166,7 @@ class Service extends Controller {
 
         $phone = \Model\Phone::find(array(
             'where' => array(
-                array("TimeOut", '>=', "NOW()")
+                array("TimeOut", '>=', array("NOW()", FALSE))
             )
         ));
         foreach ($phone as $data) {

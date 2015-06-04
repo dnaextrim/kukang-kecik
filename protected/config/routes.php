@@ -107,6 +107,23 @@ $app->post('service/getsignal', function() {
 });
 
 
+$app->get('sms', function() {
+	$c = new Controller\Kukang($this);
+	return $c->sms();
+})->template($template);
+
+$app->group('sms', function() use ($template) {
+	$this->post('find', function() {
+		$c = new Controller\SMS($this);
+		return $c->find();
+	});
+
+	$this->get('view/:id', function($id) {
+		$c = new Controller\SMS($this);
+		return $c->read($id);
+	})->template($template);
+});
+
 
 $app->get('inbox', function() {
 	$c = new Controller\Kukang($this);

@@ -161,6 +161,17 @@ if ($this->route->is() == 'user') {
 </script>
 <?php
 }
+
+if ($this->route->is() == 'sms') {
+?>
+    <script type="text/javascript">
+        kecik.SMS = function(id) {
+            window.location.href="<?php $this->url->to('sms') ?>/view/"+id.Sender;
+        };
+    </script>
+
+<?php 
+}
 ?>
 
 <script type="text/javascript">

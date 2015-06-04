@@ -21,6 +21,61 @@ class Kukang extends AuthController {
 		return $this->view('kukang/index');
 	}
 
+	public function sms() {
+		$this->assets->js->add('kecik');
+
+		$actions = array(
+			'view' 	=> (object) array(
+				'action' 	=> 'kecik.SMS',
+				'desc' 		=> 'View',
+				'icon' 		=> 'fa fa-search-plus',
+				'class'    	=> 'text-primary'
+			),
+			'delete' => (object) array(
+				'action' 	=> 'kecik.Delete',
+				'desc' 		=> 'Delete',
+				'icon' 		=> 'fa fa-trash',
+				'class'  	=> 'text-danger'
+			)
+		);
+
+		$column = array(
+			(object) array(
+				'data' 		=> 'ReceivingDateTime',
+				'title'		=> 'DATE/TIME',
+				'class'		=> 'hidden-xs'
+			),
+			(object) array(
+				'data'		=> 'SenderNumber',
+				'title'		=> 'Sender'
+			),
+			(object) array(
+				'data'		=> 'TextDecoded',
+				'title'		=> 'MESSAGE',
+				'class'		=> 'text-left'
+			),
+			(object) array(
+				'data'		=> 'status',
+				'title'		=> 'Status',
+				'visible'	=> false
+			)
+		);
+
+		$this->config->set('crud_config', json_encode(array(
+			'base_url' 		=> $this->url->baseUrl(),
+	        'insert_url' 	=> $this->url->linkto('sms/insert'),
+	        'update_url'    => $this->url->linkto('inbox/reply'),
+	        'delete_url'    => $this->url->linkto('sms/delete'),
+	        'find_url'      => $this->url->linkto('sms/find'),
+	        'get_url'       => $this->url->linkto('inbox/get'),
+	        
+	        'table_column' 	=> $column,
+	        'table_actions'	=> $actions,
+	        'table_order'	=> array(array( 1, "desc" ))
+		), JSON_PRETTY_PRINT));
+
+		return $this->view('kukang/sms');
+	}
 
 	public function inbox() {
 		$this->assets->js->add('kecik');
