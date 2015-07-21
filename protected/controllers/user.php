@@ -7,7 +7,7 @@ class User extends AuthController {
 	var $app;
 
 	public function __construct(\Kecik\Kecik $app) {
-		parent::__construct($app);
+		parent::__construct();
 
 		$this->app = $app;
 	}
