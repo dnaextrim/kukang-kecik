@@ -280,6 +280,6 @@ if ($this->route->is() == 'user') {
         }
     });
 </script>
-<script src="{{ echo $this->url->baseUrl() }}assets/js/appInit"></script>
+<!-- <script src="{{ echo $this->url->baseUrl() }}assets/js/appInit"></script> -->
   </body>
 </html>
