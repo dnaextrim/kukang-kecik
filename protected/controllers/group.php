@@ -5,10 +5,10 @@ use Kecik\AuthController;
 
 class Group extends AuthController {
 	var $app;
-
+	
 	public function __construct(\Kecik\Kecik $app) {
 		parent::__construct($app);
-
+		
 		$this->app = $app;
 	}
 
